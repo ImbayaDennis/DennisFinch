@@ -1,0 +1,125 @@
+$theme-colors:
+(
+"primary": #07b607,
+"dark": #000000
+);
+@function color($key) {
+    @return map-get($colors, $key);
+  }
+  
+  @function theme-color($key) {
+    @return map-get($theme-colors, $key);
+  }
+  
+  @function gray($key) {
+    @return map-get($grays, $key);
+  }
+
+
+body
+{
+    font-family: 'Montserrat', 'sans-serif' !important;
+    font-weight: 300;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)), url(/Resources/imgs/hero.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    
+
+    ul
+    {
+        text-transform: uppercase;
+    }
+
+    #home
+    {
+        background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(/Resources/imgs/hero2.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    #hero-img
+    {
+        background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(/Resources/imgs/hero3.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        height: 70vh;
+    }
+
+    h1, h2, h3, h4, h5
+    {
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+
+    .row-cust
+    {
+        display: inline-block;
+        margin: 20px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    section::before
+    {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 60px;
+        background: transparent;
+    }
+
+    section::after
+    {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 50px;
+        background: transparent;
+    }
+
+    .hero-text
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #ffffff;
+    }
+}
+
+section
+{
+    display: inline-block;
+    text-align: center;
+
+    .row-cust::after
+    {
+        content: '';
+        display: inline-block;
+        width: 20%;
+        height: 2px;
+        background-color: theme-color("primary");
+    }
+
+    .div-cust
+    {
+        min-height: 200px;
+    }
+
+    .carousel-box
+    {
+        color: #000000;
+        background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5));
+    }
+
+    img
+    {
+        width: 100%;
+    }
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
