@@ -1,6 +1,6 @@
 $theme-colors:
 (
-"primary": #07b607,
+"primary": #290088,
 "dark": #000000
 );
 @function color($key) {
@@ -15,15 +15,11 @@ $theme-colors:
     @return map-get($grays, $key);
   }
 
-
 body
 {
-    font-family: 'Montserrat', 'sans-serif' !important;
+    font-family: 'Nunito', 'sans-serif' !important;
     font-weight: 300;
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9)), url(/Resources/imgs/hero.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+    background: #ffffff;
     
 
     ul
@@ -31,22 +27,13 @@ body
         text-transform: uppercase;
     }
 
-    #home
+    #header
     {
-        background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(/Resources/imgs/hero2.jpg);
+        background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(/imgs/hero2.jpg);
         background-attachment: fixed;
         background-position: center;
         background-size: cover;
         height: 100vh;
-    }
-
-    #hero-img
-    {
-        background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(/Resources/imgs/hero3.jpg);
-        background-attachment: fixed;
-        background-position: center;
-        background-size: cover;
-        height: 70vh;
     }
 
     h1, h2, h3, h4, h5
@@ -95,31 +82,42 @@ section
 {
     display: inline-block;
     text-align: center;
+    min-height: 100vh;
 
     .row-cust::after
     {
         content: '';
         display: inline-block;
-        width: 20%;
+        width: 15%;
         height: 2px;
         background-color: theme-color("primary");
-    }
-
-    .div-cust
-    {
-        min-height: 200px;
-    }
-
-    .carousel-box
-    {
-        color: #000000;
-        background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5));
     }
 
     img
     {
         width: 100%;
     }
+
+    .comm-img
+    {
+        width: 64px;
+        height: 64px;
+        margin: 5px;
+    }
+    
+    .intro-txt
+    {
+        min-height: 300px;
+    }
 }
 
-@import "../node_modules/bootstrap/scss/bootstrap";
+#team
+{
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(/imgs/hero.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: #ffffff
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap"
